@@ -10,7 +10,7 @@ $( '.js-word' ).html( $wordName );
 $( '.js-type' ).html( $wordType );
 $( '.js-definition' ).html( $wordDefinition);
 $( '.js-synonyms' ).html( $wordSynonyms );
-$( '.js-dict-link' ).attr('href', 'https://www.merriam-webster.com/dictionary/' + $wordName );
+$('.js-dict-link').attr('href', 'https://www.spanishdict.com/translate/' + $wordName );
 
 
 // modify array
