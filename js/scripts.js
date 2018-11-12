@@ -1,17 +1,22 @@
 // Randomly select words from object and place into DOM
-var $word = words[Math.floor(Math.random()*words.length)];
+const word = words[Math.floor(Math.random() * words.length)];
 
-var $wordName = $word.word;
-var $wordType = $word.wordtype;
-var $wordDefinition = $word.definition;
-var $wordSynonyms = $word.synonyms;
+const wordES = word.wordES;
+const sentenceES = word.sentenceES;
+const wordEN = word.wordEN;
+const sentenceEN = word.sentenceEN;
+const wordPL = word.wordPL;
+const sentencePL = word.sentencePL;
 
-$( '.js-word' ).html( $wordName );
-$( '.js-type' ).html( $wordType );
-$( '.js-definition' ).html( $wordDefinition);
-$( '.js-synonyms' ).html( $wordSynonyms );
-$('.js-dict-link').attr('href', 'https://www.spanishdict.com/translate/' + $wordName );
-
+$( '.js-wordES' ).html( wordES );
+$('.js-sentenceES').html(sentenceES ? "&nbsp; " + sentenceES : "");
+$( '.js-wordEN' ).html(wordEN);
+$('.js-sentenceEN').html(sentenceEN ? "&nbsp; " + sentenceEN : "");
+$( '.js-wordPL' ).html(wordPL);
+$('.js-sentencePL').html(sentencePL ? "&nbsp; " + sentencePL : "");
+$( '.js-dictES-link' ).attr('href', 'https://www.spanishdict.com/translate/' + wordES );
+$( '.js-dictEN-link' ).attr('href', 'https://www.merriam-webster.com/dictionary/' + wordEN );
+$( '.js-dictPL-link' ).attr('href','https://www.diki.pl/' + wordPL );
 
 // modify array
 function nextVal(arr) {
